@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sono de Qualidade</title>
+    <title>Diário do Sono</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         html, body {
@@ -37,45 +37,40 @@
                         <li class="nav-item"><a class="nav-link text-white" href="{{ route('menu') }}">Menu</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="{{ route('dicas') }}">Dicas para o seu sono</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="{{ route('diario') }}">Diário do sono</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="{{ route('relatorio') }}">Relatório do sono</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="{{ route('relatorio') }}">Relatorio do sono</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="{{ route('faq') }}">FAQ</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="{{ route('login') }}">Login</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-
         <div class="container mt-5 content">
-            <h2 class="text-center">Cadastro de Usuário</h2><br>
-            <p class="text-center">Preencha os campos abaixo para se registrar.</p>
-
-            <form action="{{ route('registrar') }}" method="POST">
-                @csrf
+            <h2 class="text-center fw-bold">Diário do Sono</h2>
+            <p class="text-center">Preencha os campos a seguir conforme a sua noite de sono.</p>
+            <form>
                 <div class="mb-3">
-                    <label class="form-label">Nome:</label>
-                    <input type="text" name="nome" class="form-control" required>
+                    <label class="form-label">Hora de dormir:</label>
+                    <input type="time" class="form-control">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Idade:</label>
-                    <input type="number" name="idade" class="form-control" required>
+                    <label class="form-label">Hora de acordar:</label>
+                    <input type="time" class="form-control">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Histórico de problemas com o sono:</label>
-                    <textarea name="historico_sono" class="form-control"></textarea>
+                    <label class="form-label">Qualidade do sono (escala de 1 a 10):</label>
+                    <input type="number" class="form-control" min="1" max="10">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Qualidade do sono:</label>
-                    <textarea name="qualidade_sono" class="form-control"></textarea>
+                    <label class="form-label">Sintomas ou dificuldades:</label>
+                    <textarea class="form-control" placeholder="Ex: acordou no meio da noite, sonhou muito, etc."></textarea>
                 </div>
-                <button type="submit" class="btn btn-success">Cadastrar</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
             </form>
         </div>
-
         <footer class="text-center bg-primary text-white p-3 mt-auto">
             &copy; 2025 Sono de Qualidade. Todos os direitos reservados.
         </footer>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
