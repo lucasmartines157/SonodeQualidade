@@ -40,6 +40,7 @@
                         <li class="nav-item"><a class="nav-link text-white" href="{{ route('relatorio') }}">Relatorio do sono</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="{{ route('faq') }}">FAQ</a></li>
                         <li class="nav-item"><a class="nav-link text-white" href="{{ route('login') }}">Login</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="{{ route('editar') }}">Editar Cadastro</a></li>
                     </ul>
                 </div>
             </div>

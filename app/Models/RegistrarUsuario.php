@@ -9,7 +9,7 @@ class RegistrarUsuario extends Model
 {
     use HasFactory;
 
-    protected $table = 'user_sleep_data';
+    protected $table = 'user_sleep_data'; // Nome da tabela no banco de dados
 
     protected $fillable = ['nome', 'idade', 'historico_sono', 'qualidade_sono'];
 }
